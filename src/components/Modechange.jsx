@@ -26,7 +26,7 @@ export default function Modechange() {
     
     return (
         <>
-            <button onClick={currmode} className='modebutton'>☀</button>
+            <button onClick={currmode} className='modebutton'>◑</button>
             {console.log("the final mode", mode)}
         </>
     );

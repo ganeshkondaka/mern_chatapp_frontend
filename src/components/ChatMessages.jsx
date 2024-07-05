@@ -30,7 +30,7 @@ const ChatMessages = ({ newMessage }) => {
 
   return (
     <div className='body'>
-      <h1 className='heading'>Chat</h1>
+      <h1 className='heading'><span style={{fontSize:"8px"}}>Ganesh's...</span>Chatapp</h1>
       <ul className='chatarea'>
         {chatData.map(chat => (
           <li key={chat._id} className='box'>

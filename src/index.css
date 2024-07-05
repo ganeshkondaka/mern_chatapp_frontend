@@ -10,6 +10,7 @@
   height: 500px;
 } */
 .heading{
+  padding: 5px 0px;
   text-align:center;
 }
 .box{
@@ -34,7 +35,7 @@
   text-align: left;
 }
 .chatarea{
-    max-height: 535px;
+    max-height: 570px;
     overflow-y: scroll;
     width: 100%;
 }
