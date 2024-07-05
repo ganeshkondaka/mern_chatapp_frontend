@@ -34,8 +34,9 @@
   text-align: left;
 }
 .chatarea{
-  max-height: 512px;
-  overflow-y: scroll;
+    max-height: 535px;
+    overflow-y: scroll;
+    width: 100%;
 }
 .form{
   position: sticky;
