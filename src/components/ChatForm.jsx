@@ -25,8 +25,6 @@ const ChatForm = ({ onNewMessage }) => {
       // setUsername('');
       setMessage('');
       
-      // refreshing the page
-      window.location.reload();
     } catch (error) {
       console.error('Error sending chat data:', error);
     }
