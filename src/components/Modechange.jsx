@@ -4,12 +4,16 @@ export default function Modechange() {
     const [mode, setMode] = useState("white");
     console.log("the first mode", mode)
 
+    // let msg_clr=document.getElementById('box').style.color
+
     function currmode() {
         if (mode === "white") {
 
             document.body.style.backgroundColor = "black";
             // document.body.form.style.backgroundColor = "black";
             document.body.style.color = "white";
+
+            document.getElementById('box').style.color="white";
             console.log("if block prev mode",mode)
             setMode("black")
             console.log("if block after mode",mode)
@@ -17,6 +21,8 @@ export default function Modechange() {
             document.body.style.backgroundColor = "white";
             // document.body.form.style.backgroundColor = "white";
             document.body.style.color = "black";
+
+            document.getElementById('box').style.color="black";
             console.log("else block prev mode",mode)
             setMode("white")
             console.log("else block  after mode",mode)

@@ -33,9 +33,9 @@ const ChatMessages = ({ newMessage }) => {
       <h1 className='heading'><span style={{fontSize:"8px"}}>Ganesh's...</span>Chatapp</h1>
       <ul className='chatarea'>
         {chatData.map(chat => (
-          <li key={chat._id} className='box'>
+          <li key={chat._id} className='box' id="box">
             <div className='username'>{chat.username}</div>
-            <div className='message'>{chat.message}</div>
+            <div className='message' id="message">{chat.message}</div>
           </li>
         ))}
       </ul>

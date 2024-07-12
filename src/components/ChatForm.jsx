@@ -24,6 +24,9 @@ const ChatForm = ({ onNewMessage }) => {
       // Clear the input fields after successful submission
       // setUsername('');
       setMessage('');
+      
+      // refreshing the page
+      window.location.reload();
     } catch (error) {
       console.error('Error sending chat data:', error);
     }
@@ -59,7 +62,7 @@ const ChatForm = ({ onNewMessage }) => {
         </div>
       </div>
 
-      <button type="submit" className='butt'>➤</button>
+      <button type="submit" className='butt' >➤</button>
     </form>
   );
 };
