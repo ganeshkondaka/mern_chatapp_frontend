@@ -14,7 +14,8 @@ const ChatForm = ({ onNewMessage }) => {
     e.preventDefault(); // Prevent the default form submission behavior
     try {
       // Send POST request to the backend with username and message
-      const response = await axios.post('https://mern-chatapp-backend-il3i.onrender.com/postchat', {
+      // const response = await axios.post('https://mern-chatapp-backend-il3i.onrender.com/postchat', {
+      const response = await axios.post('https://mern-chatapp-backend-psi.vercel.app/postchat', {
         username,
         message,
       });

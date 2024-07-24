@@ -12,7 +12,8 @@ const ChatMessages = ({ newMessage }) => {
   // Function to fetch chat data from the backend
   const fetchChatData = async () => {
     try {
-      const response = await axios.get('https://mern-chatapp-backend-il3i.onrender.com/ok');
+      // const response = await axios.get('https://mern-chatapp-backend-il3i.onrender.com/ok');
+      const response = await axios.get('https://mern-chatapp-backend-psi.vercel.app/ok');
       setChatData(response.data.chat);
     } catch (error) {
       console.error('Error fetching chat data:', error);
