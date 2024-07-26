@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import ChatMessages from './components/ChatMessages';
 import ChatForm from './components/ChatForm';
 import Modechange from './components/Modechange';
+import Myinsta from './components/Myinsta';
 
 function App() {
   // State to store the new message
@@ -15,14 +16,19 @@ function App() {
 
   return (
     <div className="App">
-      <Modechange/>
+      {/* <Myinsta></Myinsta> */}
+      <Modechange />
       <header className="App-header">
 
         {/* Pass the newMessage state to ChatMessages */}
         <ChatMessages newMessage={newMessage} />
+
         {/* Pass the handleNewMessage function to ChatForm */}
         <ChatForm onNewMessage={handleNewMessage} />
+
       </header>
+
+
     </div>
   );
 }

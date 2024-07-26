@@ -12,6 +12,8 @@
 .heading{
   padding: 5px 0px;
   text-align:center;
+  display: flex;
+  justify-content: space-between;
 }
 .box{
   border: none;
@@ -89,3 +91,27 @@
   color: rgb(96, 96, 96);
   background-color: transparent;
 }
+.instaicon img{
+  width: 40px;
+  height: 40px;
+}
+.instaicon p{
+font-size: small;
+}
+.instaicon,a{
+  /* position: sticky; */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* .instadiv{
+  position: sticky;
+  bottom: 400px;
+  float: right;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+} */
