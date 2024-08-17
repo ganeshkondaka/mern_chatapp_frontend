@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 
 // const navigate = useNavigate()
@@ -38,40 +39,42 @@ export default function Signup() {
 
 
   return (
-    <div className='signcard' >
-      <form onSubmit={handlesubmit}>
+    <div className='signpage'>
+      <div className='signcard' >
+        <form onSubmit={handlesubmit}>
 
-        <label className='labeltext'>username</label>
-        <input
-          type="text"
-          placeholder='username'
-          value={username}
-          onChange={(e) => setusername(e.target.value)}
-          required
-        />
+          <label className='labeltext'>username</label>
+          <input
+            type="text"
+            placeholder='username'
+            value={username}
+            onChange={(e) => setusername(e.target.value)}
+            required
+          />
 
-        <label className='labeltext'>email</label>
-        <input
-          type="text"
-          placeholder='email'
-          value={email}
-          onChange={(e) => setemail(e.target.value)}
-          required
-        />
+          <label className='labeltext'>email</label>
+          <input
+            type="text"
+            placeholder='email'
+            value={email}
+            onChange={(e) => setemail(e.target.value)}
+            required
+          />
 
-        <label className='labeltext'>password</label>
-        <input
-          type="text"
-          placeholder='password'
-          value={password}
-          onChange={(e) => setpassword(e.target.value)}
-          required
-        />
+          <label className='labeltext'>password</label>
+          <input
+            type="text"
+            placeholder='password'
+            value={password}
+            onChange={(e) => setpassword(e.target.value)}
+            required
+          />
 
-        <button type='submit'>submit</button>
-
-      </form>
-      <ToastContainer></ToastContainer>
+          <button type='submit' className='submit'>submit</button>
+          <span className='spann'>already have an account ? <div><Link to="/login">login</Link></div></span>
+        </form>
+        <ToastContainer></ToastContainer>
+      </div>
     </div>
   )
 }

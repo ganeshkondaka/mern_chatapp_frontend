@@ -29,6 +29,9 @@ const ChatForm = ({ onNewMessage }) => {
       };
       // Send POST request to the backend with username and message
       // const response = await axios.post('https://mern-chatapp-backend-il3i.onrender.com/postchat', {
+      //   username,
+      //   message,
+      // },{headers});
       const response = await axios.post('http://localhost:5000/postchat', {
         username,
         message,
