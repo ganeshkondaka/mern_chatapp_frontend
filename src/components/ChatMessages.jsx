@@ -2,20 +2,54 @@ import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
 import Myinsta from './Myinsta';
+// import { useNavigate } from 'react-router-dom';
 
 // ChatMessages component to display chat messages
 const ChatMessages = ({ newMessage }) => {
+
+  // const navigate=useNavigate();
+
+  document.body.style.backgroundImage = "none"
+  const [loggedin_user, setloggedin_user] = useState('')
   // State to store the list of chat messages
   const [chatData, setChatData] = useState([]);
 
   // Reference to the chat container element
   const chatContainerRef = useRef(null);
 
+  useEffect(() => {
+    setloggedin_user(localStorage.getItem("loggedInUser"))
+  }, [])
+
+  // console.log("the loggedInUser :", loggedin_user)
+
+  const handle_logout = (e) => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('loggedInUser');
+    console.log("user logged out successfully")
+    //   setTimeout(() => {
+    //     navigate('/login');
+    // }, 1000)
+  }
+
   // Function to fetch chat data from the backend
   const fetchChatData = async () => {
     try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        throw new Error('No token found');
+      }
       // const response = await axios.get('https://mern-chatapp-backend-il3i.onrender.com/ok');
-      const response = await axios.get('https://mern-chatapp-backend-psi.vercel.app/ok');
+      // const response = await axios.get('https://mern-chatapp-backend-psi.vercel.app/ok',headers);
+      const headers = {
+        Authorization: token, // Ensure token is sent with Bearer prefix
+      };
+
+      // console.log("headers", headers)
+      // const tokken = localStorage.getItem('token');
+      // console.log('Tokken:', tokken);
+
+      const response = await axios.get("http://localhost:5000/ok", { headers });
       setChatData(response.data.chat);
     } catch (error) {
       console.error('Error fetching chat data:', error);
@@ -43,7 +77,7 @@ const ChatMessages = ({ newMessage }) => {
     // }, 60000);
 
     // Cleanup the interval on component unmount
-    return () => {clearInterval(intervalId)};
+    return () => { clearInterval(intervalId) };
   }, []);
 
   // useEffect to update the chat data state when a new message is received
@@ -76,6 +110,7 @@ const ChatMessages = ({ newMessage }) => {
           ))
         }
       </ul>
+      <button onClick={handle_logout}>Logout</button>
     </div>
   );
 };

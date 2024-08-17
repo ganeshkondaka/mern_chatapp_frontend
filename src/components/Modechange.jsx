@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function Modechange() {
     const [mode, setMode] = useState("white");
-    console.log("the first mode", mode)
+    console.log("the initial mode", mode)
 
     // let msg_clr=document.getElementById('box').style.color
 

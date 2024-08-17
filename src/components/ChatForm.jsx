@@ -6,19 +6,33 @@ import axios from 'axios';
 // ChatForm component to handle message input and submission
 const ChatForm = ({ onNewMessage }) => {
   // State to store the input values for username and message
-  const [username, setUsername] = useState('');
+
+  const [username, setUsername] = useState(localStorage.getItem("loggedInUser"));
   const [message, setMessage] = useState('');
+  // setUsername(localStorage.getItem("loggedInUser"))
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
-    try {
+    
+    
+    
+        try {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        throw new Error('No token found');
+      }
+      // const response = await axios.get('https://mern-chatapp-backend-il3i.onrender.com/ok');
+      // const response = await axios.get('https://mern-chatapp-backend-psi.vercel.app/ok',headers);
+      const headers = {
+        Authorization: token, // Ensure token is sent with Bearer prefix
+      };
       // Send POST request to the backend with username and message
       // const response = await axios.post('https://mern-chatapp-backend-il3i.onrender.com/postchat', {
-      const response = await axios.post('https://mern-chatapp-backend-psi.vercel.app/postchat', {
+      const response = await axios.post('http://localhost:5000/postchat', {
         username,
         message,
-      });
+      },{headers});
       console.log('Response:', response.data);
       // Call the onNewMessage callback with the new message data
       onNewMessage(response.data.chatdata);
@@ -37,14 +51,14 @@ const ChatForm = ({ onNewMessage }) => {
       <div className='inputforms'>
         <div >
           <label>
-            <input
+            {/* <input
               type="text"
-              placeholder='enter ur name'
+              // placeholder='enter ur name'
               className='usernameinput'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-            />
+            /> */}
           </label>
         </div>
         <div >
