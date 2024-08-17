@@ -3,12 +3,12 @@ import axios from "axios"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
-
-// const navigate = useNavigate()
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Signup() {
+  const navigate = useNavigate()
+
   const [username, setusername] = useState('');
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
@@ -26,11 +26,12 @@ export default function Signup() {
     }
     try {
       const newuser = await axios.post("http://localhost:5000/signup", user)
-      // setTimeout(() => {
-      //   navigate('/chatpage')
-      // }, 1000);
       toast.success("user created successfully")
       console.log("new user created :", newuser)
+
+      setTimeout(() => {
+          navigate('/login')
+      }, 1000);
     } catch (error) {
       toast.error(error.response.data.msg);
       console.log("th catched error:", error.response.data.msg)
@@ -41,7 +42,7 @@ export default function Signup() {
   return (
     <div className='signpage'>
       <div className='signcard' >
-        <form onSubmit={handlesubmit}>
+        <form className='formm' onSubmit={handlesubmit}>
 
           <label className='labeltext'>username</label>
           <input
@@ -71,7 +72,7 @@ export default function Signup() {
           />
 
           <button type='submit' className='submit'>submit</button>
-          <span className='spann'>already have an account ? <div><Link to="/login">login</Link></div></span>
+          <span className='spann'>already have an account ? ...<div><Link style={{color:'violet',fontSize:"20px"}} to="/login">login</Link></div></span>
         </form>
         <ToastContainer></ToastContainer>
       </div>

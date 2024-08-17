@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 
-// const navigate = useNavigate()
 
 export default function Login() {
+    const navigate = useNavigate()
+    
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
 
@@ -23,9 +24,9 @@ export default function Login() {
                 toast.success(msg);
                 localStorage.setItem('token', jwttoken);
                 localStorage.setItem('loggedInUser', name);
-                // setTimeout(() => {
-                //     navigate('/chatpage')
-                // }, 1000);
+                setTimeout(() => {
+                    navigate('/chatpage')
+                }, 1000);
             } else if (error) {
                 console.log(error);
                 toast.error(error?.details[0]?.message || "Error occurred");
@@ -38,27 +39,30 @@ export default function Login() {
     };
 
     return (
-        <div>
-            <form onSubmit={handle_submit}>
-                <label className='labeltext'>Email</label>
-                <input
-                    type="text"
-                    placeholder='Enter email'
-                    value={email}
-                    onChange={(e) => setemail(e.target.value)}
-                    required />
+        <div className='loginpage'>
+            <div className='logincard'>
+                <form className='formm' onSubmit={handle_submit}>
+                    <label className='labeltext'>Email</label>
+                    <input
+                        type="text"
+                        placeholder='Enter email'
+                        value={email}
+                        onChange={(e) => setemail(e.target.value)}
+                        required />
 
-                <label className='labeltext'>Password</label>
-                <input
-                    type="password"
-                    placeholder='Enter password'
-                    value={password}
-                    onChange={(e) => setpassword(e.target.value)}
-                    required />
-                <button type='submit' className='submit'>Submit</button>
-            </form>
-            <span>Dont have an account ?<Link to="/signup">signup</Link></span>
-            <ToastContainer />
+                    <label className='labeltext'>Password</label>
+                    <input
+                        type="password"
+                        placeholder='Enter password'
+                        value={password}
+                        onChange={(e) => setpassword(e.target.value)}
+                        required />
+                    <button type='submit' className='submit'>Submit</button>
+                </form>
+                {/* <span>Dont have an account ?<Link to="/signup">signup</Link></span> */}
+                <span className='spann'>Dont have an account ? ..<div><Link style={{color:'violet',fontSize:"20px"}} to="/signup">signup</Link></div></span>
+                <ToastContainer />
+            </div>
         </div>
     );
 }

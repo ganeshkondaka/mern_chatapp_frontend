@@ -151,14 +151,14 @@ font-size: small;
   align-items: center;
   flex-direction: column;
 } */
-.signpage{
+.signpage,.loginpage{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 44rem;
 }
 
-.signcard{
+.signcard,.logincard{
   color: white;
   width: 400px;
   height: 500px;
@@ -171,26 +171,25 @@ font-size: small;
   background-color: transparent;
   backdrop-filter: blur(7px);
 }
-form{
+.formm{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
 }
-ul{
+/* ul{
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
   gap: 20px;
-}
+} */
 input{
   height: 40px;
   width:300px;
   border-radius: 10px;
   border: 1px solid gray;
-
 }
 .labeltext{
   font-size: 20px;
