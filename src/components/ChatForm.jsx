@@ -28,14 +28,14 @@ const ChatForm = ({ onNewMessage }) => {
         Authorization: token, // Ensure token is sent with Bearer prefix
       };
       // Send POST request to the backend with username and message
-      // const response = await axios.post('https://mern-chatapp-backend-il3i.onrender.com/postchat', {
-      //   username,
-      //   message,
-      // },{headers});
-      const response = await axios.post('http://localhost:5000/postchat', {
+      const response = await axios.post('https://mern-chatapp-backend-psi.vercel.app/postchat', {
         username,
         message,
       },{headers});
+      // const response = await axios.post('http://localhost:5000/postchat', {
+      //   username,
+      //   message,
+      // },{headers});
       console.log('Response:', response.data);
       // Call the onNewMessage callback with the new message data
       onNewMessage(response.data.chatdata);

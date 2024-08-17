@@ -18,7 +18,8 @@ export default function Login() {
             return toast.error("Insufficient data");
         }
         try {
-            const response = await axios.post("http://localhost:5000/login", { email, password });
+            // const response = await axios.post("http://localhost:5000/login", { email, password });
+            const response = await axios.post("https://mern-chatapp-backend-psi.vercel.app/login", { email, password });
             const { success, error, msg, jwttoken, name } = response.data;
             if (success) {
                 toast.success(msg);

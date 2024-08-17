@@ -40,16 +40,16 @@ const ChatMessages = ({ newMessage }) => {
         throw new Error('No token found');
       }
       // const response = await axios.get('https://mern-chatapp-backend-il3i.onrender.com/ok');
-      // const response = await axios.get('https://mern-chatapp-backend-psi.vercel.app/ok',{headers});
       const headers = {
         Authorization: token, // Ensure token is sent with Bearer prefix
       };
-
+      
       // console.log("headers", headers)
       // const tokken = localStorage.getItem('token');
       // console.log('Tokken:', tokken);
-
-      const response = await axios.get("http://localhost:5000/ok", { headers });
+      
+      const response = await axios.get('https://mern-chatapp-backend-psi.vercel.app/ok',{headers});
+      // const response = await axios.get("http://localhost:5000/ok", { headers });
       setChatData(response.data.chat);
     } catch (error) {
       console.error('Error fetching chat data:', error);
