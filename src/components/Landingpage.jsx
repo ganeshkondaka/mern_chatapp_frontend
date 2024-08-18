@@ -10,8 +10,8 @@ export default function Landingpage() {
       <p> Swagatham... <br />Welcome to bommbay chat! <br /> Join the conversation and connect with others.”</p>
       <div className='login_signup'>
 
-        <button onClick={()=>{navigate('/signup')}}>signup</button>
-        <button onClick={()=>{navigate('/login')}}>login</button>
+        <button className='land_butt' onClick={()=>{navigate('/signup')}}>signup</button>
+        <button className='land_butt' onClick={()=>{navigate('/login')}}>login</button>
       </div>
     </div>
   )
