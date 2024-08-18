@@ -10,7 +10,7 @@ const ChatMessages = ({ newMessage }) => {
 
   // const navigate=useNavigate();
 
-  document.body.style.backgroundImage = "none"
+  // document.body.style.backgroundImage = "none"
   const [loggedin_user, setloggedin_user] = useState('')
   // State to store the list of chat messages
   const [chatData, setChatData] = useState([]);

@@ -9,7 +9,7 @@ export default function Modechange() {
     function currmode() {
         if (mode === "white") {
 
-            document.body.style.backgroundColor = "black";
+            document.body.style.background = "black";
             // document.body.form.style.backgroundColor = "black";
             document.body.style.color = "white";
 
@@ -18,7 +18,7 @@ export default function Modechange() {
             setMode("black")
             console.log("if block after mode",mode)
         } else {
-            document.body.style.backgroundColor = "white";
+            document.body.style.background = "white";
             // document.body.form.style.backgroundColor = "white";
             document.body.style.color = "black";
 

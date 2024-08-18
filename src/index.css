@@ -5,7 +5,7 @@
 }
 body{
   padding:0px 10px;
-  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../src/assets/bombay\ chat1.png");
+  background-color: linear-gradient(90deg, rgb(0 208 255 / 75%), rgb(90 0 246 / 75%));
   /* background-image:  url("../src/assets/bombay\ chat1.png"); */
   /* background-color: rgb(244, 238, 216); */
   /* background-position: center center; */
@@ -121,7 +121,7 @@ font-size: small;
 }
 .landing_page{
   /* background-image: url("../src/assets/chatbg.jpeg"); */
-
+  background: linear-gradient(90deg, rgb(0 208 255 / 75%), rgb(90 0 246 / 75%));
   color: white;
   height:44rem;
   display: flex;
@@ -153,6 +153,7 @@ font-size: small;
   flex-direction: column;
 } */
 .signpage,.loginpage{
+  background: linear-gradient(100deg, rgb(55 120 255), rgb(226 97 255));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,8 +162,8 @@ font-size: small;
 
 .signcard,.logincard{
   color: white;
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: 450px;
   border: 1px solid rgb(190, 190, 190);
   border-radius: 15px;
   display: flex;
@@ -202,7 +203,9 @@ input{
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #90ff84;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;
 }
