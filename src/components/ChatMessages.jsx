@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
 import Myinsta from './Myinsta';
+import Logout from './Logout';
 // import { useNavigate } from 'react-router-dom';
 
 // ChatMessages component to display chat messages
@@ -22,15 +23,6 @@ const ChatMessages = ({ newMessage }) => {
   }, [])
 
   // console.log("the loggedInUser :", loggedin_user)
-
-  const handle_logout = (e) => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('loggedInUser');
-    console.log("user logged out successfully")
-    //   setTimeout(() => {
-    //     navigate('/login');
-    // }, 1000)
-  }
 
   // Function to fetch chat data from the backend
   const fetchChatData = async () => {
@@ -98,6 +90,7 @@ const ChatMessages = ({ newMessage }) => {
   return (
     <div className='body'>
       <h1 className='heading'><span style={{ fontSize: "8px" }}>Ganesh's...</span>Chatapp
+        <Logout></Logout>
         <Myinsta></Myinsta></h1>
       <ul className='chatarea' ref={chatContainerRef}>
         {
@@ -110,7 +103,6 @@ const ChatMessages = ({ newMessage }) => {
           ))
         }
       </ul>
-      <button onClick={handle_logout}>Logout</button>
     </div>
   );
 };

@@ -24,6 +24,7 @@ body{
   text-align:center;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .box{
   border: none;
@@ -208,4 +209,12 @@ input{
 .spann{
   display: flex;
   align-items: baseline;
+}
+.logout_button{
+  height: 30px;
+  width: 50px;
+  border-radius:10px ;
+  border: none;
+  background-color: rgb(93 157 224);
+  color: white;
 }
