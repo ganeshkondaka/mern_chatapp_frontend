@@ -121,7 +121,8 @@ font-size: small;
 }
 .landing_page{
   /* background-image: url("../src/assets/chatbg.jpeg"); */
-  background: linear-gradient(90deg, rgb(0 208 255 / 75%), rgb(90 0 246 / 75%));
+  /* background: linear-gradient(90deg, rgb(0 208 255 / 75%), rgb(90 0 246 / 75%)); */
+  background:rgb(99 150 255);
   color: white;
   height:44rem;
   display: flex;
@@ -153,7 +154,8 @@ font-size: small;
   flex-direction: column;
 } */
 .signpage,.loginpage{
-  background: linear-gradient(100deg, rgb(55 120 255), rgb(226 97 255));
+  /* background: linear-gradient(100deg, rgb(55 120 255), rgb(226 97 255)); */
+  background: rgb(99 150 255);
   display: flex;
   justify-content: center;
   align-items: center;
