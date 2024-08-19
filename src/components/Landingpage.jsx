@@ -7,11 +7,11 @@ export default function Landingpage() {
   return (
     <div className='landing_page'>
       <h1 style={{ fontSize: '40px' }}>BOMMBAY chat </h1>
-      <p> Swagatham... <br />Welcome to bommbay chat! <br /> Join the conversation and connect with others.”</p>
+      <p> 🙏🙏🙏 <br />Welcome to bommbay chat! <br /> Join the conversation and connect with others.”</p>
       <div className='login_signup'>
 
-        <button className='land_butt' onClick={()=>{navigate('/signup')}}>signup</button>
-        <button className='land_butt' onClick={()=>{navigate('/login')}}>login</button>
+        <button className='land_butt' onClick={()=>{navigate('/signup')}}>SIGNUP</button>
+        <button className='land_butt' onClick={()=>{navigate('/login')}}>LOGIN</button>
       </div>
     </div>
   )

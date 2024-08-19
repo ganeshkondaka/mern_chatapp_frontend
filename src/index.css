@@ -4,7 +4,7 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-  padding:0px 10px;
+  padding:0px 0px;
   background-color: linear-gradient(90deg, rgb(0 208 255 / 75%), rgb(90 0 246 / 75%));
   /* background-image:  url("../src/assets/bombay\ chat1.png"); */
   /* background-color: rgb(244, 238, 216); */
@@ -211,6 +211,9 @@ input{
   background-color: transparent;
   cursor: pointer;
   transition: border-color 0.25s;
+}
+.submit:hover{
+  background-color: rgb(52, 52, 52);
 }
 .spann{
   display: flex;
