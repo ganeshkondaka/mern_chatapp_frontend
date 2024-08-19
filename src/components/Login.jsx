@@ -25,10 +25,10 @@ export default function Login() {
                 toast.success(msg);
                 localStorage.setItem('token', jwttoken);
                 localStorage.setItem('loggedInUser', name);
-                // setTimeout(() => {
-                //     navigate('/chatpage')
-                // }, 1000);
-                navigate('/chatpage')
+                setTimeout(() => {
+                    navigate('/chatpage')
+                }, 1000);
+                // navigate('/chatpage')
             } else if (error) {
                 console.log(error);
                 toast.error(error?.details[0]?.message || "Error occurred");

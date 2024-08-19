@@ -91,7 +91,8 @@ const ChatMessages = ({ newMessage }) => {
     <div className='body'>
       <h1 className='heading'><span style={{ fontSize: "8px" }}>Ganesh's...</span>Chatapp
         <Logout></Logout>
-        <Myinsta></Myinsta></h1>
+        {/* <Myinsta></Myinsta> */}
+        </h1>
       <ul className='chatarea' ref={chatContainerRef}>
         {
           chatData.map(chat => (
