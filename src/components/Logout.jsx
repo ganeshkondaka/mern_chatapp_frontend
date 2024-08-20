@@ -12,7 +12,7 @@ export default function Logout() {
         localStorage.removeItem('token');
         localStorage.removeItem('loggedInUser');
         console.log("user logged out successfully")
-        toast("user loggedout successfully")
+        toast.warning("user loggedout successfully")
         setTimeout(() => {
             navigate('/login');
         }, 1000)
