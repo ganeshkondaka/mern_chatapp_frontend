@@ -59,10 +59,10 @@ export default function Login() {
                         value={password}
                         onChange={(e) => setpassword(e.target.value)}
                         required />
-                    <button type='submit' className='submit'>Submit</button>
+                    <button type='submit' className='submit'  >Submit</button>
                 </form>
                 {/* <span>Dont have an account ?<Link to="/signup">signup</Link></span> */}
-                <span className='spann'>Dont have an account ? ..<div><Link style={{color:'violet',fontSize:"20px"}} to="/signup">signup</Link></div></span>
+                <span className='spann'>Don't have an account ? ..<div><Link style={{color:'violet',fontSize:"20px"}} to="/signup">signup</Link></div></span>
                 <ToastContainer />
             </div>
         </div>
