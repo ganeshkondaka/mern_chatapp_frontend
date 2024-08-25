@@ -24,7 +24,7 @@ body{
   text-align:center;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .box{
   border: none;
@@ -56,8 +56,8 @@ body{
 .form{
   position: sticky;
   bottom: 3px;
-  border-top: solid #d0d0d0 1px;
-  background-color: white;
+  /* border-top: solid #d0d0d0 1px; */
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,8 +74,8 @@ body{
   border-radius: 10px;
 }
 .butt{
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   font-size: large;
   background-color: rgb(29, 205, 29);
   border: none;
