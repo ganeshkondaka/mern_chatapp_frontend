@@ -18,7 +18,7 @@ export default function Landingpage() {
 
   return (
     <div className='landing_page'>
-      <h1 style={{ fontSize: '40px' }}>chatt app </h1>
+      <h1 className='landing_head'>CHATT APP </h1>
       <p> 🙏🙏🙏 <br />Welcome to chatt app! <br /> Join the conversation and connect with others.”</p>
       <div className='login_signup'>
 
