@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Modechange() {
     const [mode, setMode] = useState("white");
     console.log("the initial mode", mode)
-
+    useEffect(()=>{
+        document.body.style.background = "white";
+        document.body.style.color = "black";
+        // document.getElementById('box').style.color="white";
+    },[])
+    
     // let msg_clr=document.getElementById('box').style.color
-
+    
     function currmode() {
         if (mode === "white") {
 

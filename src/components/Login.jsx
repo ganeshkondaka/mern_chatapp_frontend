@@ -6,6 +6,9 @@ import { Link,useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
+    useEffect(()=>{
+        document.body.style.background = "rgb(33 33 33)";
+    },[])
 
     const navigate = useNavigate()
     
