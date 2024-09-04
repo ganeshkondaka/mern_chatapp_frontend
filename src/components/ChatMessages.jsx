@@ -52,16 +52,17 @@ const ChatMessages = ({ newMessage }) => {
   useEffect(() => {
     // Initial fetch
     fetchChatData();
-
-    // Fetch chat data every 5 seconds
+    console.log("yyaaapaari")
+    // Fetch chat data every 5 seconds //rem: changed for onmount 
     const intervalId = setInterval(() => {
       fetchChatData();
-    }, 10000);
+      console.log("mehhhhataaa")
+    }, 1000);
 
     setTimeout(() => {
       clearInterval(intervalId);
       console.log("Interval cleared");
-    }, 30000)
+    }, 2000)
 
     // const stopinterval = setTimeout(() => {
     //   clearInterval(intervalId);
@@ -70,6 +71,7 @@ const ChatMessages = ({ newMessage }) => {
 
     // Cleanup the interval on component unmount
     return () => { clearInterval(intervalId) };
+   
   }, []);
 
   // useEffect to update the chat data state when a new message is received
