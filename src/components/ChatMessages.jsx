@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Myinsta from './Myinsta';
 import Logout from './Logout';
+import Loadingtext from './Loadingtext';
 // import { useNavigate } from 'react-router-dom';
 
 // ChatMessages component to display chat messages
@@ -14,6 +15,7 @@ const ChatMessages = ({ newMessage }) => {
   const [loggedin_user, setloggedin_user] = useState('')
   // State to store the list of chat messages
   const [chatData, setChatData] = useState([]);
+  const [loading, setLoading] = useState(true); // State to manage loading
 
   // Reference to the chat container element
   const chatContainerRef = useRef(null);
@@ -43,8 +45,10 @@ const ChatMessages = ({ newMessage }) => {
       const response = await axios.get('https://mern-chatapp-backend-psi.vercel.app/ok',{headers});
       // const response = await axios.get("http://localhost:5000/ok", { headers });
       setChatData(response.data.chat);
+      setLoading(false); // Ensure loading is set to false even on error
     } catch (error) {
       console.error('Error fetching chat data:', error);
+      setLoading(false); // Ensure loading is set to false even on error
     }
   };
 
@@ -95,6 +99,9 @@ const ChatMessages = ({ newMessage }) => {
         <Logout></Logout>
         {/* <Myinsta></Myinsta> */}
         </h1>
+        {loading ? ( // Show loading component while data is being fetched
+        <Loadingtext />
+      ) : (
       <ul className='chatarea' ref={chatContainerRef}>
         {
           chatData.map(chat => (
@@ -106,6 +113,7 @@ const ChatMessages = ({ newMessage }) => {
           ))
         }
       </ul>
+      )}
     </div>
   );
 };

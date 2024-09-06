@@ -3,7 +3,7 @@ import React from 'react'
 export default function Loadingtext() {
   return (
     <div className='loadingtext'>
-        <h2>LOADING...pls wait!!</h2>
+        <h1>LOADING...pls wait!!</h1>
     </div>
   )
 }

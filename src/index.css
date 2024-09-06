@@ -66,13 +66,13 @@ body{
 }
 .form input{
   width: 250px;
-  border: none;
+  border: 1px solid gray;
   background-color: transparent;
   color: gray;
 }
 .form input:focus{
   outline: 1px solid rgb(173, 173, 173);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .butt{
   height: 40px;
@@ -252,4 +252,8 @@ input{
   background: linear-gradient(to right,   #bd9100, #ebeb13, #746800);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+.loadingtext{
+  text-align: center;
+  color: rgb(106, 0, 255);
 }
