@@ -56,11 +56,11 @@ const ChatMessages = ({ newMessage }) => {
   useEffect(() => {
     // Initial fetch
     fetchChatData();
-    console.log("yyaaapaari")
+
     // Fetch chat data every 5 seconds //rem: changed for onmount 
     const intervalId = setInterval(() => {
       fetchChatData();
-      console.log("mehhhhataaa")
+
     }, 1000);
 
     setTimeout(() => {
