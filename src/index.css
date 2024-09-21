@@ -21,6 +21,7 @@ body{
 } */
 .heading{
   padding: 5px 0px;
+  color: #c63333;
   text-align:center;
   display: flex;
   justify-content: space-around;
@@ -274,4 +275,10 @@ input{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.facelogo{
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
 }
