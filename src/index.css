@@ -39,10 +39,10 @@ body{
 }
 
 .username{
-  background-color: #363636;
+  background-color: #505050;
   font-size: 9px;
   color: #ffffff;
-  border-radius: 0px 21px 0px 20px;
+  border-radius: 5px 21px 0px 5px;
   padding:0px 10px;
 }
 .message{
