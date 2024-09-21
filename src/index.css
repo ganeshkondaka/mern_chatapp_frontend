@@ -33,15 +33,17 @@ body{
   height: fit-content;
   width: fit-content;
   background-color:transparent;
-  border: 1px solid rgb(92 92 92);
+  /* border: 1px solid rgb(92 92 92); */
   /* color: rgb(0, 0, 0); */
   border-radius: 10px;
 }
 
 .username{
-  background-color:rgb(152, 217, 152) ;
+  background-color: #363636;
   font-size: 9px;
-  color: rgb(30, 30, 30);
+  color: #ffffff;
+  border-radius: 0px 21px 0px 20px;
+  padding:0px 10px;
 }
 .message{
   font-size: 14px;
@@ -52,6 +54,7 @@ body{
     max-height: 570px;
     overflow-y: scroll;
     width: 100%;
+    padding-left: 4px;
 }
 .form{
   position: sticky;
@@ -78,7 +81,7 @@ body{
   height: 40px;
   width: 40px;
   font-size: large;
-  background-color: rgb(29, 205, 29);
+  background-color: #b9b9b9;
   border: none;
   border-radius: 50px;
 }
