@@ -1,70 +1,78 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-  padding:0px 0px;
+
+body {
+  padding: 0px 0px;
   background: rgb(33 33 33);
   background-size: cover;
   /* font-family:'Sofadi One' , sans-serif; */
 }
-.body{
+
+.body {
   background-image: none;
 }
+
 /* .App-header{
   height: 500px;
 } */
-.heading{
+.heading {
   padding: 5px 0px;
   color: #c63333;
-  text-align:center;
+  text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: 'Fascinate Inline',cursive;
+  font-family: 'Fascinate Inline', cursive;
   background-color: #1c1c1c;
 }
-.box{
+
+.box {
   border: none;
-  padding:2px 2px;
+  padding: 2px 2px;
   margin: 5px 0px;
   height: fit-content;
   width: fit-content;
-  background-color:transparent;
+  background-color: transparent;
   border: 1px solid rgb(92 92 92);
   /* color: rgb(0, 0, 0); */
   border-radius: 10px;
 }
 
-.username{
+.username {
   background-color: #505050;
   font-size: 9px;
   color: #ffffff;
   border-radius: 5px 21px 0px 5px;
-  padding:0px 10px;
-  font-family: Sofadi One,cursive;
+  padding: 0px 10px;
+  font-family: Sofadi One, cursive;
 }
-.message{
-  font-family:'Exo 2' ,cursive;
+
+.message {
+  font-family: 'Exo 2', cursive;
   font-size: 14px;
-  padding:0px 10px;
+  padding: 0px 10px;
   text-align: left;
 }
-.chatarea{
-    max-height: 570px;
-    overflow-y: scroll;
-    width: 100%;
-    padding-left: 4px;
-    color: white;
-    background-image: linear-gradient(90deg, rgba(30, 30, 30, 0.75), rgba(24, 24, 24, 0.75)), url("../static/images/thunder.jpeg");
-    background-position: center center;
-    background-repeat:no-repeat;
-    background-size: cover;
+
+.chatarea {
+  max-height: 85vh;
+  overflow-y: scroll;
+  width: 100%;
+  padding-left: 4px;
+  color: white;
+  background-image: linear-gradient(90deg, rgba(30, 30, 30, 0.75), rgba(24, 24, 24, 0.75)), url("../static/images/thunder.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
-.form{
+
+.form {
   position: sticky;
+  height: 50px;
   bottom: 3px;
   /* border-top: solid #d0d0d0 1px; */
   background-color: transparent;
@@ -74,17 +82,20 @@ body{
   justify-content: space-around;
   /* max-width: 400px; */
 }
-.form input{
+
+.form input {
   width: 250px;
   border: 1px solid gray;
   background-color: transparent;
   color: gray;
 }
-.form input:focus{
+
+.form input:focus {
   outline: 1px solid rgb(173, 173, 173);
   border-radius: 5px;
 }
-.butt{
+
+.butt {
   height: 40px;
   width: 40px;
   font-size: large;
@@ -92,16 +103,19 @@ body{
   border: none;
   border-radius: 50px;
 }
-.usernameinput{
+
+.usernameinput {
   height: 13px;
   width: 100px;
   font-size: 10px;
 }
-.massageinput{
-  height:30px ;
+
+.massageinput {
+  height: 30px;
   margin-bottom: 5px;
 }
-.modebutton{
+
+.modebutton {
   /* height: 30px;
   width: 30px; */
   border: none;
@@ -113,14 +127,18 @@ body{
   color: rgb(96, 96, 96);
   background-color: transparent;
 }
-.instaicon img{
+
+.instaicon img {
   width: 40px;
   height: 40px;
 }
-.instaicon p{
-font-size: small;
+
+.instaicon p {
+  font-size: small;
 }
-.instaicon,a{
+
+.instaicon,
+a {
   /* position: sticky; */
   width: 50px;
   height: 50px;
@@ -130,14 +148,15 @@ font-size: small;
   font-size: 25px;
 
 }
-.landing_page{
+
+.landing_page {
   background-image: linear-gradient(90deg, rgba(30, 30, 30, 0.75), rgba(24, 24, 24, 0.75)), url("../static/images/bombaychat1.png");
   /* background:rgb(32 32 32); */
-    background-position: center center;
-  background-repeat:no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  height:44rem;
+  height: 44rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -145,13 +164,15 @@ font-size: small;
   gap: 20px;
   text-align: center;
 }
-.login_signup{
+
+.login_signup {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.login_signup button{
+
+.login_signup button {
   width: 100px;
   height: 35px;
   color: white;
@@ -160,6 +181,7 @@ font-size: small;
   border-radius: 10px;
   border: 1px solid gray;
 }
+
 /* .instadiv{
   position: sticky;
   bottom: 400px;
@@ -168,7 +190,8 @@ font-size: small;
   align-items: center;
   flex-direction: column;
 } */
-.signpage,.loginpage{
+.signpage,
+.loginpage {
   /* background: linear-gradient(100deg, rgb(55 120 255), rgb(226 97 255)); */
   background: rgb(32 32 32);
   display: flex;
@@ -177,7 +200,8 @@ font-size: small;
   height: 44rem;
 }
 
-.signcard,.logincard{
+.signcard,
+.logincard {
   color: white;
   width: 350px;
   height: 450px;
@@ -190,13 +214,15 @@ font-size: small;
   background-color: transparent;
   backdrop-filter: blur(7px);
 }
-.formm{
+
+.formm {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
 }
+
 /* ul{
   display: flex;
   align-items: center;
@@ -204,16 +230,18 @@ font-size: small;
   list-style: none;
   gap: 20px;
 } */
-input{
+input {
   height: 40px;
-  width:300px;
+  width: 300px;
   border-radius: 10px;
   border: 1px solid gray;
 }
-.labeltext{
+
+.labeltext {
   font-size: 20px;
 }
-.submit{
+
+.submit {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -226,25 +254,31 @@ input{
   cursor: pointer;
   transition: border-color 0.25s;
 }
-.submit:hover{
+
+.submit:hover {
   background-color: rgb(52, 52, 52);
 }
-.spann{
+
+.spann {
   display: flex;
   align-items: baseline;
 }
-.logout_button{
+
+.logout_button {
   height: 30px;
   width: 50px;
-  border-radius:10px ;
+  border-radius: 10px;
   border: none;
   background-color: rgb(93 157 224);
   color: white;
   font-family: 'Sofadi One';
 }
+
 .loader {
-  border:10px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 10px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -253,26 +287,35 @@ input{
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.landing_head{
+
+.landing_head {
   font-size: 40px;
   font-weight: 900;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: linear-gradient(to right,   #bd9100, #ebeb13, #746800);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: linear-gradient(to right, #bd9100, #ebeb13, #746800);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.loadingtext{
+
+.loadingtext {
   text-align: center;
   color: rgb(106, 0, 255);
 }
 
 .loadingtext {
   margin-left: 33%;
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #212121; /* Blue */
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #212121;
+  /* Blue */
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -280,15 +323,20 @@ input{
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.facelogo{
+.facelogo {
   height: 40px;
   width: 40px;
   border-radius: 50px;
   background-position: center center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 }
