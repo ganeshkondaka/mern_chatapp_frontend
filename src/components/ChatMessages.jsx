@@ -95,9 +95,11 @@ const ChatMessages = ({ newMessage }) => {
 
   return (
     <div className='body'>
-      <h1 className='heading'><span style={{ fontSize: "8px" }}>
-        <img src="../static/images/facelogo.png" alt="logo" className='facelogo' />
-      </span>Chatapp
+      <h1 className='heading'>
+      <span style={{ fontSize: "8px" }}>
+        <img src="../static/images/sigma.jpg" alt="logo" className='facelogo' />
+      </span>
+      Chatt App -/^
         <Logout></Logout>
         {/* <Myinsta></Myinsta> */}
         </h1>

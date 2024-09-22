@@ -17,7 +17,7 @@ export default function Chatpage_component() {
 
     return (
         <div className='app'>
-            <Modechange></Modechange>
+            {/* <Modechange></Modechange> */}
             
             <header className="App-header">
                 <ChatMessages newMessage={newMessage} /> {/* Pass the newMessage state to ChatMessages */}
