@@ -67,12 +67,31 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
+
+/* Custom scrollbar styles */
+.chatarea::-webkit-scrollbar {
+  width: 20px; /* Width of the scrollbar */
+}
+
+.chatarea::-webkit-scrollbar-track {
+  background: #5f5f5f; /* Background of the scrollbar track */
+}
+
+.chatarea::-webkit-scrollbar-thumb {
+  background: #333333; /* Color of the scrollbar thumb */
+}
+
+.chatarea::-webkit-scrollbar-thumb:hover {
+  background: #222222; /* Color of the scrollbar thumb on hover */
+}
+
+
 
 .form {
   position: sticky;
-  height: 50px;
+  height: 65px;
   bottom: 3px;
   /* border-top: solid #d0d0d0 1px; */
   background-color: transparent;
