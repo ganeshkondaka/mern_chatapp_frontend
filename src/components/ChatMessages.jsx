@@ -22,7 +22,7 @@ const ChatMessages = ({ newMess, socket }) => {
             }
 
             const headers = { Authorization: token };
-            const response = await axios.get('http://localhost:5000/ok', { headers });
+            const response = await axios.get('https://mern-chatapp-backend-il3i.onrender.com/ok', { headers });
             setChatData(response.data.chat);
             setLoading(false);
         } catch (error) {

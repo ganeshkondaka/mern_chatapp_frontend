@@ -8,7 +8,7 @@ export default function Chatpage_component() {
     const [socket, setSocket] = useState(null);
 
     useEffect(() => {
-        const newSocket = io('http://localhost:5000'); // Backend URL
+        const newSocket = io('https://mern-chatapp-backend-il3i.onrender.com'); // Backend URL
         setSocket(newSocket);
 
         return () => {
