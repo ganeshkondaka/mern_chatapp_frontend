@@ -26,7 +26,7 @@ export default function Signup() {
     }
     try {
       // const newuser = await axios.post("http://localhost:5000/signup", user)
-      const newuser = await axios.post("https://mern-chatapp-backend-psi.vercel.app/signup", user)
+      const newuser = await axios.post("https://mern-chatapp-backend-il3i.onrender.com/signup", user)
       toast.success("user created successfully")
       console.log("new user created :", newuser)
 
