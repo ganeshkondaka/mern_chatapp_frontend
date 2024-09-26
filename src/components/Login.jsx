@@ -26,7 +26,7 @@ export default function Login() {
         setloadingv(true); // Set loading to true when the request starts
         try {
             // const response = await axios.post("http://localhost:5000/login", { email, password });
-            const response = await axios.post("https://mern-chatapp-backend-il3i.onrender.com//login", { email, password });
+            const response = await axios.post("https://mern-chatapp-backend-il3i.onrender.com/login", { email, password });
             const { success, error, msg, jwttoken, name } = response.data;
             if (success) {
                 toast.success(msg);
