@@ -1,28 +1,35 @@
-
-import React from 'react'
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { io } from 'socket.io-client';
 import ChatMessages from './ChatMessages';
 import ChatForm from './ChatForm';
-import Modechange from './Modechange';
-
 
 export default function Chatpage_component() {
-    // State to store the new message
-    const [newMessage, setNewMessage] = useState(null);
+    const [newMess, setNewMessage] = useState(null);
+    const [socket, setSocket] = useState(null);
 
-    // Callback function to update the new message state
+    useEffect(() => {
+        const newSocket = io('http://localhost:5000'); // Backend URL
+        setSocket(newSocket);
+
+        return () => {
+            newSocket.disconnect(); // Clean up the socket connection on unmount
+        };
+    }, []);
+
     const handleNewMessage = (message) => {
         setNewMessage(message);
     };
 
     return (
         <div className='app'>
-            {/* <Modechange></Modechange> */}
-            
             <header className="App-header">
-                <ChatMessages newMessage={newMessage} /> {/* Pass the newMessage state to ChatMessages */}
-                <ChatForm onNewMessage={handleNewMessage} /> {/* Pass the handleNewMessage function to ChatForm */}
+                <ChatMessages socket={socket} newMess={newMess} />
+                <ChatForm socket={socket} onNewMessage={handleNewMessage} />
             </header>
         </div>
-    )
+    );
 }
+
+
+
+
