@@ -173,7 +173,7 @@ a {
 }
 
 .landing_page {
-  background-image: linear-gradient(90deg, rgba(30, 30, 30, 0.75), rgba(24, 24, 24, 0.75)), url("../static/images/bombaychat1.png");
+  background-image: linear-gradient(90deg, rgb(0 0 0 / 75%), rgb(158 0 0 / 75%)), url("../static/images/bombaychat1.png");
   /* background:rgb(32 32 32); */
   background-position: center center;
   background-repeat: no-repeat;
@@ -187,6 +187,13 @@ a {
   gap: 20px;
   text-align: center;
 }
+.lan_p{
+  font-family: 'Sofadi One';
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: larger;
+  /* text-shadow: -1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px -1px 0 #ffffff, -1px -1px 0 #ffffff; */
+}
 
 .login_signup {
   display: flex;
@@ -198,11 +205,13 @@ a {
 .login_signup button {
   width: 100px;
   height: 35px;
-  color: white;
+  color: rgb(249, 193, 64);
+  font-weight: 700;
+  font-family: 'Exo 2';
   border-radius: 10px;
   background-color: transparent;
   border-radius: 10px;
-  border: 1px solid gray;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 /* .instadiv{
@@ -226,9 +235,10 @@ a {
 .signcard,
 .logincard {
   color: white;
-  width: 350px;
-  height: 450px;
-  border: 1px solid rgb(190, 190, 190);
+  width: 80%;
+  max-width: 350px;
+  height: 409px;
+  /* border: 1px solid rgb(190, 190, 190); */
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -259,9 +269,15 @@ input {
   border-radius: 10px;
   border: 1px solid gray;
 }
+.authinputs{
+  width: 270px;
+  background-color: transparent;
+  border: 1px solid white;
+}
 
 .labeltext {
   font-size: 20px;
+  color: #ff4c4c;
 }
 
 .submit {
@@ -271,7 +287,7 @@ input {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  color: white;
+  color: #ffca00;
   border: 1px solid white;
   background-color: transparent;
   cursor: pointer;
@@ -320,10 +336,10 @@ input {
 }
 
 .landing_head {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 900;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: linear-gradient(to right, #bd9100, #ebeb13, #746800);
+  font-family: 'Fascinate Inline', sans-serif;
+  background: linear-gradient(to right, #bd9100, #ebeb13, #ffe502);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }

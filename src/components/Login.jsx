@@ -54,30 +54,32 @@ export default function Login() {
     return (
         <div className='loginpage'>
             <div className='logincard'>
-            {loadingv ? ( // Conditionally render the Loadingtext component
+                {loadingv ? ( // Conditionally render the Loadingtext component
                     <Loadingtext />
                 ) : (
-                
-                <form className='formm' onSubmit={handle_submit}>
-                    <label className='labeltext'>Email</label>
-                    <input
-                        type="text"
-                        placeholder='Enter email'
-                        value={email}
-                        onChange={(e) => setemail(e.target.value)}
-                        required />
 
-                    <label className='labeltext'>Password</label>
-                    <input
-                        type="password"
-                        placeholder='Enter password'
-                        value={password}
-                        onChange={(e) => setpassword(e.target.value)}
-                        required />
-                    <button type='submit' className='submit'  >Submit</button>
-                </form>
+                    <form className='formm' onSubmit={handle_submit}>
+                        <label className='labeltext'>Email</label>
+                        <input
+                            className='authinputs'
+                            type="text"
+                            placeholder='Enter email'
+                            value={email}
+                            onChange={(e) => setemail(e.target.value)}
+                            required />
+
+                        <label className='labeltext'>Password</label>
+                        <input
+                            className='authinputs'
+                            type="password"
+                            placeholder='Enter password'
+                            value={password}
+                            onChange={(e) => setpassword(e.target.value)}
+                            required />
+                        <button type='submit' className='submit'  >Submit</button>
+                    </form>
                 )}
-                 {/* <span>Dont have an account ?<Link to="/signup">signup</Link></span>  */}
+                {/* <span>Dont have an account ?<Link to="/signup">signup</Link></span>  */}
                 <span className='spann'>Don't have an account ? ..<div><Link style={{ color: 'violet', fontSize: "20px" }} to="/signup">signup</Link></div></span>
                 <ToastContainer />
             </div>

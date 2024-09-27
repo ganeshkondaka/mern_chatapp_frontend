@@ -31,7 +31,7 @@ export default function Signup() {
       console.log("new user created :", newuser)
 
       setTimeout(() => {
-          navigate('/login')
+        navigate('/login')
       }, 1000);
     } catch (error) {
       toast.error(error.response.data.msg);
@@ -47,6 +47,7 @@ export default function Signup() {
 
           <label className='labeltext'>username</label>
           <input
+            className='authinputs'
             type="text"
             placeholder='username'
             value={username}
@@ -56,6 +57,7 @@ export default function Signup() {
 
           <label className='labeltext'>email</label>
           <input
+            className='authinputs'
             type="text"
             placeholder='email'
             value={email}
@@ -65,6 +67,7 @@ export default function Signup() {
 
           <label className='labeltext'>password</label>
           <input
+            className='authinputs'
             type="text"
             placeholder='password'
             value={password}
@@ -73,7 +76,7 @@ export default function Signup() {
           />
 
           <button type='submit' className='submit'>submit</button>
-          <span className='spann'>already have an account ? ...<div><Link style={{color:'violet',fontSize:"20px"}} to="/login">login</Link></div></span>
+          <span className='spann'>already have an account ? ...<div><Link style={{ color: 'violet', fontSize: "20px" }} to="/login">login</Link></div></span>
         </form>
         <ToastContainer></ToastContainer>
       </div>

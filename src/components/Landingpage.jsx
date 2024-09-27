@@ -19,7 +19,7 @@ export default function Landingpage() {
   return (
     <div className='landing_page'>
       <h1 className='landing_head'>CHATT APP </h1>
-      <p> 🙏🙏🙏 <br />Welcome to chatt app! <br /> Join the conversation and connect with others.”</p>
+      <p className='lan_p'> 🙏🙏🙏 <br />Welcome to chatt app! <br /> Join the conversation and connect with others.”</p>
       <div className='login_signup'>
 
         <button className='land_butt' onClick={() => { navigate('/signup') }}>SIGNUP</button>
