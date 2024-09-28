@@ -41,44 +41,49 @@ export default function Signup() {
 
 
   return (
-    <div className='signpage'>
-      <div className='signcard' >
-        <form className='formm' onSubmit={handlesubmit}>
+    <div>
+      <div className='signpage'>
+        <span className='back_arrow_div'>
+          <button className='back_arrows' onClick={() => { navigate('/land_doop') }}> &lt;&lt; Homepage </button>
+        </span>
+        <div className='signcard' >
+          <form className='formm' onSubmit={handlesubmit}>
 
-          <label className='labeltext'>username</label>
-          <input
-            className='authinputs'
-            type="text"
-            placeholder='username'
-            value={username}
-            onChange={(e) => setusername(e.target.value)}
-            required
-          />
+            <label className='labeltext'>username</label>
+            <input
+              className='authinputs'
+              type="text"
+              placeholder='username'
+              value={username}
+              onChange={(e) => setusername(e.target.value)}
+              required
+            />
 
-          <label className='labeltext'>email</label>
-          <input
-            className='authinputs'
-            type="text"
-            placeholder='email'
-            value={email}
-            onChange={(e) => setemail(e.target.value)}
-            required
-          />
+            <label className='labeltext'>email</label>
+            <input
+              className='authinputs'
+              type="text"
+              placeholder='email'
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+              required
+            />
 
-          <label className='labeltext'>password</label>
-          <input
-            className='authinputs'
-            type="text"
-            placeholder='password'
-            value={password}
-            onChange={(e) => setpassword(e.target.value)}
-            required
-          />
+            <label className='labeltext'>password</label>
+            <input
+              className='authinputs'
+              type="text"
+              placeholder='password'
+              value={password}
+              onChange={(e) => setpassword(e.target.value)}
+              required
+            />
 
-          <button type='submit' className='submit'>submit</button>
-          <span className='spann'>already have an account ? ...<div><Link style={{ color: 'violet', fontSize: "20px" }} to="/login">login</Link></div></span>
-        </form>
-        <ToastContainer></ToastContainer>
+            <button type='submit' className='submit'>submit</button>
+            <span className='spann'>already have an account ? ...<div><Link style={{ color: 'violet', fontSize: "20px" }} to="/login">login</Link></div></span>
+          </form>
+          <ToastContainer></ToastContainer>
+        </div>
       </div>
     </div>
   )
