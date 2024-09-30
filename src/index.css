@@ -6,7 +6,7 @@
 
 body {
   padding: 0px 0px;
-  background: #61000029;
+  background: rgb(33 33 33);
   background-size: cover;
   /* font-family:'Sofadi One' , sans-serif; */
 }
@@ -26,7 +26,7 @@ body {
   justify-content: space-around;
   align-items: center;
   font-family: 'Fascinate Inline', cursive;
-  background-color: #61000029;
+  background-color: #1c1c1c;
 }
 
 .box {
@@ -251,7 +251,7 @@ a {
   align-items: center;
   flex-direction: column;
   background-color: transparent;
-  /* backdrop-filter: blur(7px); */
+  backdrop-filter: blur(5px);
 }
 
 .formm {

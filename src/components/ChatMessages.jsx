@@ -65,7 +65,7 @@ const ChatMessages = ({ newMess, socket }) => {
             <div className='body'>
               <h1 className='heading'>
               <span style={{ fontSize: "8px" }}>
-                <img src="../static/images/sigma3.png" alt="logo" className='facelogo' />
+                <img src="../static/images/sigma.jpg" alt="logo" className='facelogo' />
               </span>
               Chatt App -/^
                 <Logout></Logout>
