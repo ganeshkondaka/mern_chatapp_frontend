@@ -251,7 +251,7 @@ a {
   align-items: center;
   flex-direction: column;
   background-color: transparent;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 
 .formm {
@@ -277,7 +277,7 @@ input {
 }
 .authinputs{
   color: white;
-  width: 270px;
+  width: 240px;
   background-color: transparent;
   border: 1px solid white;
 }
@@ -359,9 +359,9 @@ input {
 .loadingtext {
   margin-left: 33%;
   border: 16px solid #f3f3f3;
-  /* Light grey */
+
   border-top: 16px solid #212121;
-  /* Blue */
+
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -388,14 +388,15 @@ input {
 }
 .back_arrows{
   padding-left: 50px;
-  color: rgb(255, 255, 255);
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.49);
   background-color: transparent;
   border: none;
   font-family: 'Sofadi One' ;
-  animation: fadeinout 4s infinite;
+  animation: fadeinout 3s infinite;
 }
   @keyframes fadeinout {
-            0%, 100% { opacity: 0;margin-left: 5px; }
+            0%, 100% { opacity: 0;margin-left: 10px; }
             50% { opacity: 1;margin-left:0px; }      
   }
 .back_arrow_div{
