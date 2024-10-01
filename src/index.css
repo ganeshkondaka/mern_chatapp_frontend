@@ -251,7 +251,7 @@ a {
   align-items: center;
   flex-direction: column;
   background-color: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
 }
 
 .formm {
