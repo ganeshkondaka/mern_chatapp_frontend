@@ -19,7 +19,7 @@ export default function Login() {
     const [loadingv, setloadingv] = useState(false)
 
     const handle_submit = async (e) => {
-        e.preventDefault(); // Fix the typo
+        e.preventDefault(); 
         if (!email || !password) {
             return toast.error("Insufficient data");
         }
@@ -59,7 +59,10 @@ export default function Login() {
                 </span>
                 <div className='logincard'>
                     {loadingv ? ( // Conditionally render the Loadingtext component
-                        <Loadingtext />
+                        <div className='loading_div'>
+                            <p>It takes a few minutes to boot up the backend server if it hasn't been used for a long time, so please wait....</p>
+                            <Loadingtext />
+                        </div>
                     ) : (
 
                         <form className='formm' onSubmit={handle_submit}>
