@@ -20,7 +20,7 @@ body {
 } */
 .heading {
   padding: 5px 0px;
-  color: #ff0000;
+  color: #ff2f2f;
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -36,8 +36,8 @@ body {
   margin-left: 8px;
   height: fit-content;
   width: fit-content;
-  background-color: rgb(237, 0, 0);
-  border: 1px solid rgb(92 92 92);
+  background-color: rgb(255 52 52);
+  /* border: 1px solid rgb(92 92 92); */
   /* color: rgb(0, 0, 0); */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -47,7 +47,7 @@ body {
 
 .username {
   /* background-color: #505050; */
-  background-color: #ff0505;
+  background-color: #ff3434;
   font-size: 9px;
   color: #ffffff;
   border-radius: 5px 21px 0px 5px;
@@ -132,7 +132,7 @@ body {
   height: 40px;
   width: 40px;
   font-size: large;
-  background-color: #ff1c1c;
+  background-color: #ff3f3f;
   border: none;
   border-radius: 50px;
 }
