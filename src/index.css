@@ -65,7 +65,7 @@ body {
 .chatarea {
   max-height: 80vh;
   overflow-y: scroll;
-  width: 100%;
+  width: 100%; /* Default width for smaller screens */
   padding-left: 0px;
   color: white;
   background-image: linear-gradient(90deg, rgba(30, 30, 30, 0.75), rgba(24, 24, 24, 0.75)), url("../static/images/thunder.jpeg");
@@ -75,6 +75,12 @@ body {
   background-size: cover;
 }
 
+@media (min-width: 700px) {
+  .chatarea {
+    width: 700px; /* Set width to 700px for large screens and larger */
+    margin: 0 auto; /* Center the chat area horizontally */
+  }
+}
 
 /* Custom scrollbar styles */
 .chatarea::-webkit-scrollbar {
@@ -113,6 +119,13 @@ body {
   justify-content: center;
   justify-content: space-around;
   /* max-width: 400px; */
+}
+
+@media (min-width: 700px) {
+  .form {
+    width: 700px; /* Set width to 700px for large screens and larger */
+    margin: 0 auto; /* Center the chat area horizontally */
+  }
 }
 
 .form input {
